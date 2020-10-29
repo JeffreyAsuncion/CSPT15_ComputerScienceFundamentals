@@ -2,12 +2,12 @@
 
 public class Problem03 {
 
-    public static void main(String[] args) {
+    public void SwitchCase1(String str) {
     
 	    
 	// Approach1
 	
-        String str = "Welcome To Java"; // Original string
+        //String str = "Welcome To Java"; // Original string
         // Step 1 - split string into words
 	String[] words = str.split(" ");  //Splitting into words
 
@@ -20,27 +20,19 @@ public class Problem03 {
 	    // start from end of word	
 	    for (int i=w.length()-1; i >=0; i--) // Welcome
 	    {
-	        /* THIS DOES NOT WORK AS PLANNED
-		if (Character.isUpperCase(w.charAt(i)))
-		{
-			w.charAt(i) = w.toLowerCase();
-		}
-		else
-		{
-			w.charAt(i) = w.charAt(i).toUppercase();
-		}
-		*/
 		reverseword = reverseword + w.charAt(i);
 	    }
 	    // Step 3 - rebuild the String with reverseword from 2a
 	    reverseString = reverseString + reverseword + " "; // emocleW
 	}
 	System.out.println(reverseString);
+    }	
+
+    public void SwitchCase2(String str) {
 	
-	/*	
 	// Approach2
 	
-        String str = "Welcome To Java"; // Original string
+        //String str = "Welcome To Java"; // Original string
 	
 	//Step 1 split into array of words
 	String[] words = str.split("\\s");
@@ -58,7 +50,40 @@ public class Problem03 {
 	}
 
 	System.out.println(reverseword);
-	*/
-	
+
     }
+
+    // Method to convert characters of string to opposite case
+    // https://www.geeksforgeeks.org/convert-alternate-characters-string-upper-case/
+    public static String convertOpposite(StringBuffer str)
+    {
+        int ln = str.length();
+
+	// Conversion using predefined methods
+	for (int i=0; i<ln; i++)
+	{
+	    Character c = str.charAt(i);
+	    if (Character.isLowerCase(c))
+                str.replace(i, i+1, Character.toUpperCase(c)+"");
+	    else
+		str.replace(i, i+1, Character.toLowerCase(c)+"");
+	}
+	return str;
+    }
+
+    public static void main(String[] args) {
+    
+        StringBuffer str = new StringBuffer("Hello World!");
+	// Calling the Method
+	convertOpposite(str);
+
+	System.out.println(str);
+		://www.geeksforgeeks.org/convert-alternate-characters-string-upper-case//
+    
+    }
+
+
+
+
+
 }
