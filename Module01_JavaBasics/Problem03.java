@@ -54,7 +54,7 @@ public class Problem03 {
     }
 
     // Method to convert characters of string to opposite case
-    // https://www.geeksforgeeks.org/convert-alternate-characters-string-upper-case/
+    // www.geeksforgeeks.org/convert-alternate-characters-string-upper-case/
     public static String convertOpposite(StringBuffer str)
     {
         int ln = str.length();
@@ -78,7 +78,7 @@ public class Problem03 {
 	convertOpposite(str);
 
 	System.out.println(str);
-		://www.geeksforgeeks.org/convert-alternate-characters-string-upper-case//
+		//www.geeksforgeeks.org/convert-alternate-characters-string-upper-case//
     
     }
 
