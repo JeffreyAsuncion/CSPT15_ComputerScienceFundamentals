@@ -1,8 +1,12 @@
+// https://www.youtube.com/watch?v=uYLkKT-VrmM
 
 public class Problem03 {
 
     public static void main(String[] args) {
     
+	    
+	// Approach1
+	/*
         String str = "Welcome To Java"; // Original string
         // Step 1 - split string into words
 	String[] words = str.split(" ");  //Splitting into words
@@ -22,5 +26,29 @@ public class Problem03 {
 	    reverseString = reverseString + reverseword + " "; // emocleW
 	}
 	System.out.println(reverseString);
+	*/
+	
+	// Approach2
+	
+        String str = "Welcome To Java"; // Original string
+	
+	//Step 1 split into array of words
+	String[] words = str.split("\\s");
+
+	String reverseword = "";
+
+	for (String w:words)// Welcome // like for(w in words) python
+	{
+	    // Step 2
+	    StringBuilder sb = new StringBuilder(w);  //
+	    sb.reverse(); // built-in function // emocleW
+	    
+            // Step 3	    
+	    reverseword = reverseword + sb.toString() + " ";
+	}
+
+	System.out.println(reverseword);
+	
+	
     }
 }
