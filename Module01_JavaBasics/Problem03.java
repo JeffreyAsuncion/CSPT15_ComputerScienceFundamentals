@@ -6,7 +6,7 @@ public class Problem03 {
     
 	    
 	// Approach1
-	/*
+	
         String str = "Welcome To Java"; // Original string
         // Step 1 - split string into words
 	String[] words = str.split(" ");  //Splitting into words
@@ -20,14 +20,24 @@ public class Problem03 {
 	    // start from end of word	
 	    for (int i=w.length()-1; i >=0; i--) // Welcome
 	    {
-	        reverseword = reverseword + w.charAt(i);
+	        /* THIS DOES NOT WORK AS PLANNED
+		if (Character.isUpperCase(w.charAt(i)))
+		{
+			w.charAt(i) = w.toLowerCase();
+		}
+		else
+		{
+			w.charAt(i) = w.charAt(i).toUppercase();
+		}
+		*/
+		reverseword = reverseword + w.charAt(i);
 	    }
 	    // Step 3 - rebuild the String with reverseword from 2a
 	    reverseString = reverseString + reverseword + " "; // emocleW
 	}
 	System.out.println(reverseString);
-	*/
 	
+	/*	
 	// Approach2
 	
         String str = "Welcome To Java"; // Original string
@@ -48,7 +58,7 @@ public class Problem03 {
 	}
 
 	System.out.println(reverseword);
-	
+	*/
 	
     }
 }
