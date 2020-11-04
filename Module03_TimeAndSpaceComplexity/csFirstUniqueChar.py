@@ -19,21 +19,42 @@ Examples:
 """
 
 def csFirstUniqueChar(input_str):
+    
+    count = {}
+    
+    # use dict count to Count frequency of letters
+    for char in range(len(input_str)):
+        if input_str[char] not in count:
+            count[input_str[char]] = 1
+        else :
+            count[input_str[char]] += 1
+    
+    # search for 1st
+
+    for index, char in enumerate(input_str):
+        if count[char] == 1:
+            return index
+    return -1
+            
+
+
+    
+    """
     char_order = []
     count = {}
-      
+     
     for char in input_str:
         if char in count:
             count[char] += 1
         else:
             count[char] = 1 
-            char_order.append(char)
+        char_order.append(char)
         
-    for index, char in enumerate(char_order):
+    for index, char in enumerate(input_str):
         if count[char] == 1:
             return index
     return -1
-
+    """
 
 
     
